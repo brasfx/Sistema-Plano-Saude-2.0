@@ -9,6 +9,7 @@
 * MongoDB
 
 <h2>Mudanças da versão 1.0:</h2></br>
+
 * Utilização do banco de dados NoSQL (substituindo o XML para armazenar os dados)</br>
 * Utilização do MongoDB Atlas </br>
 
