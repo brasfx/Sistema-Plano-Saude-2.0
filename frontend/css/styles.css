@@ -1,0 +1,14 @@
+th {
+  background-color: grey;
+  text-align: center !important;
+}
+td {
+  text-align: center;
+}
+tr {
+  text-align: center;
+}
+
+table.highlight > tbody > tr:hover {
+  background-color: #64ffda !important;
+}
