@@ -8,7 +8,7 @@
 * PHP<br>
 * MongoDB
 
-<h2>Mudanças da versão 1.0:</h2></br>
+<h2>Mudanças da versão 1.0:</h2>
 
 * Utilização do banco de dados NoSQL (substituindo o XML para armazenar os dados)</br>
 * Utilização do MongoDB Atlas </br>
