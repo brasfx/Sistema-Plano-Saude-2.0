@@ -20,18 +20,7 @@ if (isset($_POST["CNPJ"], $_POST["senha"])) {
         header("location: ./starter_lab.php");
     }
   }
-    // $xml = new DOMDocument();
-    // libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-    // $arquivoxml = "../../db/laboratorios.xml";
-    // $xml->load($arquivoxml);
-    // $busca = array();
-    // foreach ($xml->getElementsByTagName('laboratorio') as $laboratorio) {
-    //   if ($laboratorio->getAttribute('CNPJ') == $_POST["CNPJ"] && $laboratorio->getAttribute('senha') == $_POST["senha"]) {
-    //     $_SESSION['tipo'] = "LAB";
-    //     $_SESSION['CNPJ'] = $_POST["CNPJ"];
-    //     header("location: ./starter_lab.php");
-    //   }
-    // }
+    
   }if($login != $doc['CNPJ'] || $senha != $doc['senha']){
     header("location: ./login_lab.html");
   }

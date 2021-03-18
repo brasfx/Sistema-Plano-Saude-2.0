@@ -73,11 +73,11 @@ $contadorPac = countPac();
   <div class="center " style="display: grid;place-content: center;margin-top:40px">
   <div class="center" style="font-size: 20px;margin:20px;text-align:left">
   <?php
-    echo " <b>Admnistrador : {$admin['nome']}</br></br></b>";
+    echo " <b>Administrador : {$admin['nome']}</br></br></b>";
     
     ?>
   </div>
-<div class="center" style="font-weight:bold;text-align:center;align-items:center;margin:20px">
+<div class="center" style="font-weight:bold;text-align:justify;align-items:center;margin:20px">
   <?php
   echo "<p>Numero de administradores: {$contadorAdm}</br></p>";
   echo "<p>Numero de laboratorios: {$contadorLab}</br></p>";

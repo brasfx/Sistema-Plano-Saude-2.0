@@ -28,20 +28,7 @@ function incluiExame($CPF, $CNPJ, $data, $tipoExame, $resultado)
   }catch(MongoDB\Exception $error){
     die($error->getMessage());
   }
-  // if (!existeExame($CPF)) {
-  // $arquivoxml = "../../db/exames.xml";
-  // $xml = new DOMDocument();
-  // $xml->load($arquivoxml);
-  // $exames = $xml->getElementsByTagName('exames')[0];
-  // $exame = $exames->appendChild(new DOMElement('exame'));
-  // $xml->save($arquivoxml);
-  // $exame->setAttribute('CPF', $CPF);
-  // $exame->setAttribute('CNPJ', $CNPJ);
-  // $exame->appendChild(new DOMElement('data', $data));
-  // $exame->appendChild(new DOMElement('tipoExame', $tipoExame));
-  // $exame->appendChild(new DOMElement('resultado', $resultado));
-  // $xml->save($arquivoxml);
-  // }
+ 
 }
 
 function mostraExameLAB($CNPJ)
@@ -66,23 +53,7 @@ function mostraExameLAB($CNPJ)
  
 }
 return $busca;
-  // $xml = new DOMDocument();
-  // libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-  // $arquivoxml = "../../db/exames.xml";
-  // $xml->load($arquivoxml);
-  // $busca = array();
-  // $count = 0;
-  // foreach ($xml->getElementsByTagName('exame') as $exame) {
-  //   if ($exame->getAttribute('CNPJ') == $CNPJ) {
-  //     $busca[$count]['CPF'] = $exame->getAttribute('CPF');
-  //     $busca[$count]['data'] = $exame->getElementsByTagName('data')[0]->nodeValue;
-  //     $busca[$count]['resultado'] = $exame->getElementsByTagName('resultado')[0]->nodeValue;
-  //     $busca[$count]['tipoExame'] = $exame->getElementsByTagName('tipoExame')[0]->nodeValue;
-  //     $count++;
-  //     // break;
-  //   }
-  // }
-  // return $busca;
+ 
 }
 
 function mostraExamePAC($CPF)
@@ -107,23 +78,7 @@ function mostraExamePAC($CPF)
   //echo 'console.log('. json_encode( $doc ) .')';
 }
 return $busca;
-  // $xml = new DOMDocument();
-  // libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-  // $arquivoxml = "../../db/exames.xml";
-  // $xml->load($arquivoxml);
-  // $busca = array();
-  // $count = 0;
-  // foreach ($xml->getElementsByTagName('exame') as $exame) {
-  //   if ($exame->getAttribute('CPF') == $CPF) {
-  //     $busca[$count]['CNPJ'] = $exame->getAttribute('CNPJ');
-  //     $busca[$count]['data'] = $exame->getElementsByTagName('data')[0]->nodeValue;
-  //     $busca[$count]['resultado'] = $exame->getElementsByTagName('resultado')[0]->nodeValue;
-  //     $busca[$count]['tipoExame'] = $exame->getElementsByTagName('tipoExame')[0]->nodeValue;
-  //     $count++;
-  //     // break;
-  //   }
-  // }
-  // return $busca;
+ 
 }
 
 function listaExames()

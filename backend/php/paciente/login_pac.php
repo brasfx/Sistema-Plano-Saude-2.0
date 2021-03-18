@@ -19,18 +19,7 @@ if (isset($_POST["CPF"], $_POST["senha"])) {
         header("location: ./starter_pac.php");
     }
   }
-    // $xml = new DOMDocument();
-    // libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-    // $arquivoxml = "../../DB/pacientes.xml";
-    // $xml->load($arquivoxml);
-    // $busca = array();
-    // foreach ($xml->getElementsByTagName('paciente') as $paciente) {
-    //   if ($paciente->getAttribute('CPF') == $_POST["CPF"] && $paciente->getAttribute('senha') == $_POST["senha"]) {
-    //     $_SESSION['tipo'] = "PAC";
-    //     $_SESSION['CPF'] = $_POST["CPF"];
-    //     header("location: ./starter_pac.php");
-    //   }
-    // }
+   
   }if($login != $doc['CPF'] || $senha != $doc['senha']){
     header("location: ./login_pac.html");
   }

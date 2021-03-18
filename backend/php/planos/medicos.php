@@ -16,18 +16,7 @@ foreach($result as $doc){
  break;
  }
 }
-  // $xml = new DOMDocument();
-  // libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-  // $arquivoxml = "../../db/medicos.xml";
-  // $xml->load($arquivoxml);
-  // $existe = FALSE;
-  // foreach ($xml->getElementsByTagName('medico') as $medico) {
-  //   if ($medico->getAttribute('CRM') == $CRM) {
-  //     $existe = TRUE;
-  //     break;
-  //   }
-  // }
-  // return $existe;
+  
 }
 
 function incluiMedico($CRM, $email,$telefone, $senha, $nome, $CEP, $endNum, $especialidade,$genero)
@@ -46,23 +35,7 @@ function incluiMedico($CRM, $email,$telefone, $senha, $nome, $CEP, $endNum, $esp
   }catch(MongoDB\Exception $error){
     die($error->getMessage());
   }
-  // if (!existeMedico($CRM)) {
-  //   $arquivoxml = "../../db/medicos.xml";
-  //   $xml = new DOMDocument();
-  //   $xml->load($arquivoxml);
-  //   $medicos = $xml->getElementsByTagName('medicos')[0];
-  //   $medico = $medicos->appendChild(new DOMElement('medico'));
-  //   $xml->save($arquivoxml);
-  //   $medico->setAttribute('CRM', $CRM);
-  //   $medico->setAttribute('senha', $senha);
-  //   $medico->appendChild(new DOMElement('nome', $nome));
-  //   $medico->appendChild(new DOMElement('email', $email));
-  //   $medico->appendChild(new DOMElement('telefone', $telefone));
-  //   $medico->appendChild(new DOMElement('CEP', $CEP));
-  //   $medico->appendChild(new DOMElement('endNum', $endNum));
-  //   $medico->appendChild(new DOMElement('especialidade', $especialidade));
-  //   $xml->save($arquivoxml);
-  // }
+
 }
 
 function mostraMedico($CRM)
@@ -86,24 +59,7 @@ function mostraMedico($CRM)
   }
   return $doc;
 }
-  // $xml = new DOMDocument();
-  // libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-  // $arquivoxml = "../../db/medicos.xml";
-  // $xml->load($arquivoxml);
-  // $busca = array();
-  // foreach ($xml->getElementsByTagName('medico') as $medico) {
-  //   if ($medico->getAttribute('CRM') == $CRM) {
-  //     $busca['senha'] = $medico->getAttribute('senha');
-  //     $busca['email'] = $medico->getElementsByTagName('email')[0]->nodeValue;
-  //     $busca['nome'] = $medico->getElementsByTagName('nome')[0]->nodeValue;
-  //     $busca['telefone'] = $medico->getElementsByTagName('telefone')[0]->nodeValue;
-  //     $busca['CEP'] = $medico->getElementsByTagName('CEP')[0]->nodeValue;
-  //     $busca['endNum'] = $medico->getElementsByTagName('endNum')[0]->nodeValue;
-  //     $busca['especialidade'] = $medico->getElementsByTagName('especialidade')[0]->nodeValue;
-  //     break;
-  //   }
-  // }
-  // return $busca;
+  
 }
 
 function listaMedicos()
@@ -143,35 +99,7 @@ function alteraMedico($CRM, $email,$senha,$telefone, $nome, $CEP, $endNum, $espe
   }catch(MongoDB\Exception $error){
     die($error->getMessage());
   }
-  // $xml = new DOMDocument();
-  // libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-  // $arquivoxml = "../../db/medicos.xml";
-  // $xml->load($arquivoxml);
-  // foreach ($xml->getElementsByTagName('medico') as $medico) {
-  //   if ($medico->getAttribute('CRM') == $CRM) {
-  //     /*verifica o que vai entrar de dados antigos ou atuais*/
-  //     $senha = ($senha ? $senha : $medico->getAttribute('senha'));
-  //     $email = ($email ? $email : $medico->getElementsByTagName('email')[0]->nodeValue);
-  //     $nome = ($nome ? $nome : $medico->getElementsByTagName('nome')[0]->nodeValue);
-  //     $telefone = ($telefone ? $telefone : $medico->getElementsByTagName('telefone')[0]->nodeValue);
-  //     $CEP = ($CEP ? $CEP : $medico->getElementsByTagName('CEP')[0]->nodeValue);
-  //     $endNum = ($endNum ? $endNum : $medico->getElementsByTagName('endNum')[0]->nodeValue);
-  //     $especialidade = ($especialidade ? $especialidade : $medico->getElementsByTagName('especialidade')[0]->nodeValue);
-  //     /*repopula o elemento Medico com a decisão anterior*/
-  //     $medicoatualizado = $xml->createElement('medico');
-  //     $medicoatualizado->setAttribute('CRM', $CRM);
-  //     $medicoatualizado->setAttribute('senha', $senha);
-  //     $medicoatualizado->appendChild(new DOMElement('nome', $nome));
-  //     $medicoatualizado->appendChild(new DOMElement('email', $email));
-  //     $medicoatualizado->appendChild(new DOMElement('telefone', $telefone));
-  //     $medicoatualizado->appendChild(new DOMElement('CEP', $CEP));
-  //     $medicoatualizado->appendChild(new DOMElement('endNum', $endNum));
-  //     $medicoatualizado->appendChild(new DOMElement('especialidade', $especialidade));
-  //     $medico->parentNode->replaceChild($medicoatualizado, $medico);
-  //     $xml->save($arquivoxml);
-  //     break;
-  //   }
-  // }
+  
 }
 
 function excluiMedico($CRM)
@@ -187,18 +115,7 @@ echo ("Medico excluido com sucesso!");
 } catch (MongoDB\Exception\InvalidArgumentException $error) {
   die($error);
 }
-  // $xml = new DOMDocument();
-  // libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-  // $arquivoxml = "../../db/medicos.xml";
-  // $xml->load($arquivoxml);
-  // foreach ($xml->getElementsByTagName('medico') as $medico) {
-  //   if ($medico->getAttribute('CRM') == $CRM) {
-  //     $parent = $medico->parentNode;
-  //     $parent->removeChild($medico);
-  //     break;
-  //   }
-  // }
-  // $xml->save($arquivoxml);
+ 
 }
 
 

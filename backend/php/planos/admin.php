@@ -16,22 +16,9 @@ foreach($result as $doc){
  break;
  }
 }
-
 return $existe;
-
-  // $xml = new DOMDocument();
-  // libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-  // $arquivoxml = "../../db/admin.xml";
-  // $xml->load($arquivoxml);
-  // $existe = FALSE;
-  // foreach ($xml->getElementsByTagName('admin') as $admin) {
-  //   if ($admin->getAttribute('CPF') == $CPF) {
-  //     $existe = TRUE;
-  //     break;
-  //   }
-  // }
-  // return $existe;
 }
+
 //cadastra um novo admin
 function insereAdmin($CPF, $senha, $nome)
 {
@@ -67,26 +54,6 @@ try{
   die($error->getMessage());
 }
 
-
-//   $xml = new DOMDocument();
-//   libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-//   $arquivoxml = "../../db/admin.xml";
-//   $xml->load($arquivoxml);
-//   foreach ($xml->getElementsByTagName('admin') as $admin) {
-//     if ($admin->getAttribute('login') == $CPF) {
-//       /*verifica o que vai entrar de dados antigos ou atuais*/
-//       $senha = ($senha ? $senha : $admin->getAtribute('senha'));
-//       $nome = ($nome ? $nome : $admin->getElementsByTagName('nome')[0]->nodeValue);
-//       /*repopula o elemento Admin com a decisão anterior*/
-//       $adminatualizado = $xml->createElement('admin');
-//       $adminatualizado->setAttribute('login', $CPF);
-//       $adminatualizado->setAttribute('senha', $senha);
-//       $adminatualizado->appendChild(new DOMElement('nome', $nome));
-//       $admin->parentNode->replaceChild($adminatualizado, $admin);
-//       $xml->save($arquivoxml);
-//       break;
-//     }
-//   }
 }
 
 function mostraAdmin($nome)
@@ -107,19 +74,7 @@ return $doc;
   }catch(MongoDB\Exception $error){
     die($error->getMessage());
   }
-  // $xml = new DOMDocument();
-  // libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-  // $arquivoxml = "../../db/admin.xml";
-  // $xml->load($arquivoxml);
-  // $busca = array();
-  // foreach ($xml->getElementsByTagName('admin') as $admin) {
-  //   if ($admin->getAttribute('login') == $CPF) {
-  //     //$busca['senha'] = $admin->getAtribute('senha');
-  //     $busca['nome'] = $admin->getElementsByTagName('nome')[0]->nodeValue;
-  //     break;
-  //   }
-  // }
-  // return $busca;
+ 
 }
 
 function countAdmin(){

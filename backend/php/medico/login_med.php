@@ -19,18 +19,7 @@ if (isset($_POST["CRM"], $_POST["senha"])) {
         header("location: ./starter_med.php");
     }
   }
-    // $xml = new DOMDocument();
-    // libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-    // $arquivoxml = "../../DB/medicos.xml";
-    // $xml->load($arquivoxml);
-    // $busca = array();
-    // foreach ($xml->getElementsByTagName('medico') as $medico) {
-    //   if ($medico->getAttribute('CRM') == $_POST["CRM"] && $medico->getAttribute('senha') == $_POST["senha"]) {
-    //     $_SESSION['tipo'] = "MED";
-    //     $_SESSION['CRM'] = $_POST["CRM"];
-    //     header("location: ./starter_med.php");
-    //   }
-    // }
+   
   }if($login != $doc['CRM'] || $senha != $doc['senha']){
     header("location: ./login_med.html");
   }
