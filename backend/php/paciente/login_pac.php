@@ -31,6 +31,8 @@ if (isset($_POST["CPF"], $_POST["senha"])) {
     //     header("location: ./starter_pac.php");
     //   }
     // }
+  }if($login != $doc['CPF'] || $senha != $doc['senha']){
+    header("location: ./login_pac.html");
   }
 } else {
   include "./login_pac.html";

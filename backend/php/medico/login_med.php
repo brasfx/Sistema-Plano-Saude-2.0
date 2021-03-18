@@ -31,6 +31,8 @@ if (isset($_POST["CRM"], $_POST["senha"])) {
     //     header("location: ./starter_med.php");
     //   }
     // }
+  }if($login != $doc['CRM'] || $senha != $doc['senha']){
+    header("location: ./login_med.html");
   }
 } else {
   include "login_med.html";

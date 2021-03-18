@@ -32,6 +32,8 @@ if (isset($_POST["CNPJ"], $_POST["senha"])) {
     //     header("location: ./starter_lab.php");
     //   }
     // }
+  }if($login != $doc['CNPJ'] || $senha != $doc['senha']){
+    header("location: ./login_lab.html");
   }
 } else {
 

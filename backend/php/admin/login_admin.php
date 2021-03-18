@@ -23,6 +23,8 @@ if (!empty($_POST["login"]) && !empty($_POST["senha"])) {
 }
   
 //header("location: ./starter_admin.php");
+}if($login != $doc['login'] || $senha != $doc['senha']){
+header("location: ./login_admin.html");
 }
     // $xml = new DOMDocument();
     // libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
@@ -42,3 +44,6 @@ if (!empty($_POST["login"]) && !empty($_POST["senha"])) {
 
   include "./login_admin.html";
 }
+?>
+
+

@@ -83,6 +83,7 @@ $contadorPac = countPac();
   echo "<p>Numero de laboratorios: {$contadorLab}</br></p>";
   echo "<p>Numero de médicos {$contadorMed}</br></p>";
   echo "<p>Numero de pacientes: {$contadorPac}</br></p>";
+  
   ?>
 </div>
 </div>
